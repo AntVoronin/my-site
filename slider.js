@@ -15,40 +15,35 @@ class Slider {
         this.open();
         this.photo.addEventListener('click', (ev)=> {
             ev.stopPropagation(); 
-            console.log('zoming image...');
+            //console.log('zoming image...');
         });
 
         //выводим текст-описание при наведении на фото:
-        this.photo.addEventListener('mouseover', (ev)=> {
-            console.log('text info...' );
-            this.info.classList.add('show');
-        });
-        this.photo.addEventListener('mouseout', (ev)=> {
-            this.info.classList.remove('show');
-        });
+        this.photo.addEventListener('mouseover', ()=> this.info.classList.add('show')    );
+        this.photo.addEventListener('mouseout',  ()=> this.info.classList.remove('show') );
 
-        this.wrapper.addEventListener( 'click',  () => this.close() );
-        this.btnClose.addEventListener('click', () => this.close() );
-        window.addEventListener('keydown', ev => { if( ev.key === "Escape" ) this.close() });
+        //как повесить один обработчик на разные элементы?
+        this.wrapper.addEventListener( 'click',  ()=> this.close() );
+        this.btnClose.addEventListener('click',  ()=> this.close() );
 
         this.btnNext.addEventListener('click',  ev => {
             ev.stopPropagation(); //остановили всплытие к wrapper, чтоб не сворачивался слайдер при клике
             this.next();
         } );
-        window.addEventListener('keydown',  ev => {
-            if(ev.key === "ArrowRight") this.next();
-        } );
-
         this.btnPrev.addEventListener('click',  ev => {
             ev.stopPropagation(); 
             this.prev();
         } );
+
         window.addEventListener('keydown',  ev => {
-            if(ev.key === "ArrowLeft") this.prev();
+            if(ev.key === "ArrowRight") this.next();
+            if(ev.key === "ArrowLeft" ) this.prev();
+            if(ev.key === "Escape" )    this.close()
         } );
+
         //автослайдер на главную:
         if(this.auto) {
-            console.log('123');
+            //console.log('123');
         }
     }
     
@@ -57,14 +52,14 @@ class Slider {
         this.photo.classList.add('show');
         this.photo.append(this.img);
         this.i = +this.img.dataset.id;
-        //console.log(this.);
-        document.body.style.overflow = 'hidden'; //убирает полосу прокрутки сайта
+        this.scrollBar(0);
     }
+    
     close() {
         this.wrapper.classList.remove('show');
         this.photo.classList.remove('show');
         this.photo.innerHTML = '';
-        document.body.style.overflow = ''; //возвращает полосу прокрутки сайта
+        this.scrollBar(1);
         //как удалить объект слайдера? они множатся!!
     }
     next() {
@@ -81,4 +76,8 @@ class Slider {
         let img = this.imgGallery[this.i-1].cloneNode(true);
         this.photo.append( img );
      }
+     scrollBar(bul) {
+        if(bul) document.body.style.overflow = ''; //возвращаем полосу прокрутки
+        else    document.body.style.overflow = 'hidden'; //убираем полосу прокрутки 
+    }
 }
