@@ -16,46 +16,44 @@ window.addEventListener('DOMContentLoaded', function() {
             info:        '.slider__info' //? как выводить реальное описание каждой фото?
         },
         about: {
-            gryadki:   "В российской глубинке многие люди живут на земле своим хозяйством. Съёмка с воздуха позволила взглянуть на огороды, поля как на абстрактные ковры-паттерны, сотканные из кочанов капусты, поливочных шлангов, молодых всходов и распаханных в зиму чернозёмов. <p>Фотографии сделаны в Воронежской области в 2018-2021г.</p> ",
-            salt_lake: "Солёные озера расположены в степи. Здесь начинается зона полупустынь с жарким и засушливым летом. Уже в мае с наступлением жары степь меняет цвет с ярко-зеленого на светло-зеленый и желтый буквально за одну-две недели. Источниками влаги для озер служат родники и небольшие речки, но основной источник – это талые воды. С наступлением лета озера начинают пересыхать. Там, где два-три месяца назад была вода, остаются обширные соляные поля. Соль как бы прорисовывает, проявляет особенности рельефа дна, следы бегущих в озеро весенних ручьев. С высоты это видно особенно хорошо, поэтому часть фотографий сделана с квадрокоптера. Очень удивили и привлекли фактуры, абстрактные «соляные рисунки» на высохшем дне озера, необычный цвет. Почва здесь буро-красного оттенка из-за высокого содержания железа, что придаёт неземной характер ландшафту. Абстракции буквально везде: можно весь вечер исследовать 100-200 метров побережья, разглядывая под ногами узоры из соли. Или поднять в небо квадрокоптер и увидеть дно озера как его видят местные орлы – тоже абстракции, но уже в другом масштабе. <p>Фотографии сделаны на солёных озёрах Эльтон (Волгоградская область) и Баскунчак (Астраханская область) в период с 2018 по 2021 годы.</p>",
-            sea:       "Море всегда производило на меня сильное впечатление. После шумного города от одного вида бескрайнего синего горизонта становится легче и спокойнее. Мне кажется, особенно это ощущаешь не в сезон отпусков: когда нет громкой музыки, толп отдыхающих, и ты ясно слышишь шум прибоя, чаек, запахи моря. Для меня это возможность побыть наедине со стихией, да и просто с самим собой. Иногда после таких прогулок приходит осознание чего-то важного. <p>Фотографии сделаны в Коктебеле, Анапе, Геленджике, Евпатории, Адлере, Зеленоградске, на Куршской косе. 2021-2024г.</p>"
+            gryadki:   "В российской глубинке многие люди живут на земле своим хозяйством. Съёмка с воздуха позволила взглянуть на огороды, поля как на абстрактные ковры-&nbspпаттерны, сотканные из кочанов капусты, поливочных шлангов, молодых всходов и распаханных в зиму&nbspчернозёмов. <p>Фотографии сделаны в Воронежской области в 2018-&nbsp2021г.</p> ", 
+            salt_lake: "Солёные озера расположены в степи. Здесь начинается зона полупустынь с жарким и засушливым летом. Уже в мае с наступлением жары степь меняет цвет с ярко-зеленого на светло-зеленый и желтый буквально за одну-две недели. Источниками влаги для озер служат родники и небольшие речки, но основной источник – это талые воды. С наступлением лета озера начинают пересыхать. Там, где два-три месяца назад была вода, остаются обширные соляные поля. Соль как бы прорисовывает, проявляет особенности рельефа дна, следы бегущих в озеро весенних ручьев. С высоты это видно особенно хорошо, поэтому часть фотографий сделана с квадрокоптера. Очень удивили и привлекли фактуры, абстрактные «соляные рисунки» на высохшем дне озера, необычный цвет. Почва здесь буро-красного оттенка из-за высокого содержания железа, что придаёт неземной характер ландшафту. Абстракции буквально везде: можно весь вечер исследовать 100-&nbsp200 метров побережья, разглядывая под ногами узоры из соли. Или поднять в небо квадрокоптер и увидеть дно озера как его видят местные орлы – тоже&nbspабстракции, но уже в другом масштабе. <p>Фотографии сделаны на солёных озёрах Эльтон&nbsp(Волгоградская область) и Баскунчак&nbsp(Астраханская область) в период с 2018 по 2021 годы.</p>",
+            sea:       "Море всегда производило на меня сильное впечатление. После шумного города от одного вида бескрайнего синего горизонта становится легче и спокойнее. Мне кажется, особенно это ощущаешь не в сезон отпусков: когда нет громкой музыки, толп отдыхающих, и ты ясно слышишь шум прибоя, чаек, запахи моря. Для меня это возможность побыть наедине со стихией, да и просто с самим собой. Иногда&nbspпосле таких прогулок приходит осознание чего-&nbspто&nbspважного. <p>Фотографии сделаны в Коктебеле, Анапе, Геленджике, Евпатории, Адлере, Зеленоградске, на&nbspКуршской косе. 2021-2024г.</p>"
         },
         html: {
             contact: `<div class="contact">
-                                <div class="contact">
-                                    <h2>Связаться со мной</h2>
-                                    <form action="/">
-                                        <div class="row">
-                                            <div class="form-group">
-                                                <label for="name">Ваше имя:</label> 
-                                                <input type="text" id="name" placeholder="...имя...">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="mail">Ваш e-mail:</label> 
-                                                <input type="text" id="mail" placeholder="...mail...">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="message">Ваше сообщение:</label>
-                                            <textarea type="text" id="message" cols="30" rows="5"></textarea>
-                                        </div>        
-                                            <input class="btn" type="submit" value="Связаться!">
-                                    </form> 
+                            <h2>Связаться со мной</h2>
+                            <form action="/" class="formContact">
+                                <div class="row">
+                                    <div class="form-group">
+                                        <label for="name">Ваше имя:</label> 
+                                        <input type="text" id="name" placeholder="...имя...">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="mail">Ваш e-mail:</label> 
+                                        <input type="text" id="mail" placeholder="...mail...">
+                                    </div>
                                 </div>
-                            </div>`,
+                                <div class="form-group">
+                                    <label for="message">Ваше сообщение:</label>
+                                    <textarea type="text" id="message" cols="30" rows="5"></textarea>
+                                </div>        
+                                    <input class="btn" type="submit" value="Связаться!">
+                            </form> 
+                        </div>`,
             cv: `<div class="cv">
-                    <h2>CV фотографа:</h2>
+                    <h2>CV фотографа:</h2> 
                     
                     <h3>2024г.</h3>
                     <p>-Шорт-лист конкурса «Аргус. Фотография среди искусств», серия «Грядки». Сочи.</p>
-                    <p>-Выставка "Фотографии, образы, мысли", Краснодар. (Краснодарский выставочный зал)</p>
+                    <p>-Выставка "Фотографии, образы, мысли", Краснодар&nbsp(Краснодарский выставочный зал)</p>
                     <p>-Юбилейная выставка Воронежского отделения Союза Фотохудожников России, Воронеж.</p>
 
                     <h3>2023г.</h3>
-                    <p>-Участие в выставке «Осмысленный пейзаж», 18-29 января Краснодар</p>
+                    <p>-Участие в выставке «Осмысленный пейзаж», 18&nbsp-&nbsp29&nbspянваря Краснодар</p>
 
                     <h3>2022г.</h3>
-                    <p>-Конкурс Русского Географического общества  «Самая красивая страна 2022», член экспертной комиссии.</p>
+                    <p>-Конкурс Русского Географического общества  «Самая&nbspкрасивая&nbspстрана&nbsp2022», член экспертной комиссии.</p>
                     <p>-Выставка фотографии и живописи "Край Воронежский - край Петра I", выставочный зал союза художников, Воронеж.</p>
                     <p>-Фестиваль «Молодые фотографы России». Финалист, серия «Грядки». Выставка в г. Калуга.</p>
 
@@ -87,18 +85,22 @@ window.addEventListener('DOMContentLoaded', function() {
     li_submenu.forEach( el => {
         el.addEventListener('click', ()=> {
             el.classList.toggle('active');
+            
             let submenu = el.querySelector('.sidebar__menu__submenu');
+            //как сделать выборку елем подменю кроме текущего? может как-то через псевдокласс not(селектор)? для реализации "аккордеона"
+            let all_submenu = document.querySelectorAll(`.sidebar__menu__submenu`); 
+
             if( !submenu.style.maxHeight ) {
-                submenu.style.maxHeight = submenu.scrollHeight + 'px';
+                all_submenu.forEach( el => {
+                    //доделать логику toggle('active'), 
+                    // el.parentElement.classList.remove('active');
+                    el.style.maxHeight = null }   ); // сначала все свернули (если сделать выборку кроме текущего элемента, то лишнее действие)
+                submenu.style.maxHeight = submenu.scrollHeight + 'px'; // затем разветнули конкретный el
             } else submenu.style.maxHeight = null;
         })
     } );
 
-    logo.addEventListener('click', ()=> {
-        // если одно главное фото:
-        // content.insertAdjacentHTML( "beforeend",`<div class="mainImg"> <img src="/img/main_1.jpg" alt="main_1.jpg"></img> </div>` ) ;
-        sliderAuto(content);
-    })
+    logo.addEventListener('click', ()=>sliderAuto(content) );
 
     menu.forEach( el=> {
         el.addEventListener('click', event=> {
@@ -139,30 +141,15 @@ window.addEventListener('DOMContentLoaded', function() {
     
     function gallery(el) {
         content.innerHTML = '';
-        //сделать ф-цией??
+        content.insertAdjacentHTML("beforeend", `<h2>${el.text}</h2>`  );
         content.insertAdjacentHTML("beforeend", `<div class="main__content__about"> <p>${str.about[el.id]}</p> </div>` );
         for(let i=1; i<=el.dataset.num; i++) //  или el.getAttribute('data-num')
         {// content.innerHTML += `<img src="/img/gryadki/${i}.jpg" alt=""></img>` ; 
             content.insertAdjacentHTML("beforeend", `<div class="main__content__img"><img src="img/${el.id}/${i}.jpg" data-id="${i}" alt="${i}.jpg"></img></div>` );
         }
-        document.querySelectorAll('.main__content .main__content__img > img').forEach( img => {
-                                                    img.addEventListener('click', ()=> {
-                                                        //console.log(event.target.scrollHeight);
-                                                        // img.classList.add('zoom'); //как лучше добавить анимац зуум??
-                                                        let imgClick = img.cloneNode(true);
-                                                        let slider = new Slider({ 
-                                                                                    img:         imgClick, 
-                                                                                    imgGallery:  '.main__content .main__content__img > img',
-                                                                                    wrapper:     str.slider.wrapper,
-                                                                                    photo:       str.slider.photo,
-                                                                                    btnNext:     str.slider.btnNext,
-                                                                                    btnPrev:     str.slider.btnPrev,
-                                                                                    btnClose:    str.slider.btnClose,
-                                                                                    info:        str.slider.info, //? как выводить реальное описание каждой фото?
-                                                                                    auto:        'false'
-                                                                                });
-                                                    })
-                                                } );
+
+        //слайдеры накапливаются приповторном запуске, как их очищать? чтоб оставался только один слайдер?
+        newSlider('.main__content .main__content__img > img');
     };
 
     function innerHTMLitem(context, str) {
@@ -180,6 +167,27 @@ window.addEventListener('DOMContentLoaded', function() {
         let slider_auto = new Slider_auto( document.querySelectorAll('.slider-auto img') );
         const tmr = setInterval( ()=> { slider_auto.next() } , 2500 );
         setTimeout( ()=> { clearInterval(tmr) }, 70000 );
+    }
+
+    function newSlider(selector) {
+        document.querySelectorAll( selector ).forEach( img => {
+            img.addEventListener('click', ()=> {
+                // img.classList.add('zoom'); //как лучше добавить анимац зуум??
+                let imgClick = img.cloneNode(true);
+                let slider = new Slider({ 
+                                            img:         imgClick, 
+                                            imgGallery:  '.main__content .main__content__img > img',
+                                            wrapper:     str.slider.wrapper,
+                                            photo:       str.slider.photo,
+                                            btnNext:     str.slider.btnNext,
+                                            btnPrev:     str.slider.btnPrev,
+                                            btnClose:    str.slider.btnClose,
+                                            info:        str.slider.info, //? как выводить реальное описание каждой фото? из img.alt брать???
+                                            auto:        'false'
+                                        });
+            console.log('new slider obj');
+            })
+        } );
     }
 
 })

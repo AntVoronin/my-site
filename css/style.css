@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); 
+
+html {
+    /* font: normal 62.5% "Roboto", sans-serif;  */
+    font: normal 10px "Roboto", sans-serif;
+}
 * {
     margin: 0;
     padding: 0;
@@ -11,13 +16,6 @@ ul, ol {
     padding: 0;
     list-style: none;
 }
-h2 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-h3 {
-    margin-top: 30px;
-}
 a {
     text-decoration: none; 
     color: black;
@@ -27,9 +25,6 @@ a:hover {
 }
 body {
     background-color: #f1f1f1;
-    font: normal 15px "Roboto", sans-serif;
-    /* letter-spacing: 1.5; */
-    line-height: 1.5;
 }
 
 .page-wrapper {
@@ -44,20 +39,23 @@ body {
     top: 0;
     left: 0;
     width: 25%;
-    max-width: 320px;
+    /* max-width: 320px; */
     height: 100%;
     overflow: hidden;
     text-align: left;
-    padding: 40px 40px;
+    /* padding: 40px 10px 40px 40px; */
+    padding: 3em 0.5em 3em 3em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    color: #0f141e;
 }
 
 .main {
     max-width: 1140px; 
-    padding-left: 320px;
-    padding-top: 50px;
+    /* padding-left: 320px; */
+    padding-left: 25%;
+    padding-top: 5em;
 }
 .main__content {
     overflow: hidden;
@@ -68,16 +66,25 @@ body {
     align-items: center;
     gap: 20px;
     padding-bottom: 50px;
-}
-.main__content__about {
-    margin: 0 auto;
-    width: 90%;
-    margin-bottom: 20px;
     text-align: justify;
-    line-height: 1.5em;
+    line-height: 2.5em;
+}
+.main__content h2 { font-size: 2em; text-align: center; }
+.main__content h3 { 
+    font-size: 1.5em; 
+    /* margin: 20px 0 5px 0;  */
+    margin: 1em 0 0.3em 0; }
+.main__content p  { font-size: 1.6em; }
+.main__content__about {
+    /* margin: 0 auto;
+    width: 90%; */
+    padding: 0 2em; 
+    margin-bottom: 20px;
+    text-indent: 40px;
 }
 .main__content__about p {
-    text-indent: 20px;
+    margin-bottom: 10px;
+    font-size: 1.6em;
 }
 .main__content__img {
     width: 190px;
@@ -88,7 +95,6 @@ body {
     height: 130px;
     cursor: zoom-in;
 }
-
 /* .zoom {
     width: 700px;
     transition: width 2s ;
@@ -138,6 +144,9 @@ body {
     left: 5%;
     /* background-image:url(/img/tech_img/arrow_prev.png) ; */
 }
+.slider__prev .fa, .slider__next .fa {
+    font-size: 5em;
+}
 .slider__next {
     top: calc(50% - 40px);
     left: 90%;
@@ -146,6 +155,7 @@ body {
     top:   30px;
     right: 30px;
 }
+.slider__close .fa { font-size: 3em; }
  /* ------------------ автослайдер на главной ------------------ */
 .slider-auto {
     width: 700px;
@@ -175,44 +185,26 @@ body {
     display: none;
 }
 
-/* .mainImg {
-    padding: 20px 0 20px 100px;
-}
-.mainImg img {
-    width: 400px;
-} */
-
-/* @media screen and (max-width: 700px) {
-    .info {
-      display: block;
-      text-align: center;
-    }
-    div.info-text {
-        margin-left: 0px;
-    }
-  } */
-
   /* ----------------- sidebar--------------- */
 .sidebar__logo h1 {
+    font-size: 3.5em;
     margin-bottom: 30px;
     cursor: pointer;
 }
 
 .sidebar__menu {
     list-style: none;
-    color: #0f141e;
-    font: normal bold 17px "Roboto", sans-serif;
+    font: normal bold 2em "Roboto", sans-serif;
     flex-grow: 1;
 }
 .sidebar__menu li {
-    margin-bottom: 10px;
-    padding-bottom: 5px;
+    margin-bottom: 0.5em;
     cursor: pointer;
 }
-.sidebar__menu>li[data-sub_menu="sub_menu"] span:hover {
+.sidebar__menu>li[data-submenu="submenu"] span:hover {
     text-decoration: underline;
 }
-.sidebar__menu li[data-sub_menu="sub_menu"] span::after {
+.sidebar__menu li[data-submenu="submenu"] span::after {
     content: " ▾";
     display: inline-block;
     position: relative;
@@ -229,15 +221,15 @@ body {
 }
 .sidebar__menu__submenu li {
     list-style: none;
-    padding: 0 10px;
+    padding: 0.5em 0 0 0.5em;
     text-align: start;
     margin-bottom: 0;
-    margin-top: 10px;
 }
-.sidebar__footer {
-    color: #2d2d2d;
-    font-size: 15px;
+.sidebar__footer__copyright p {
+    font-size: 1.5em;
 }
+.cv { padding-left: 20px; }
+
 /*-------------- форма связи: -------------*/
 /* .contact h2 {
     text-align: center;
@@ -265,5 +257,3 @@ body {
 .row .form-group:first-child {
     margin-right: 20px;
 }
-
- 

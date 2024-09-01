@@ -12,20 +12,21 @@ class Slider {
         this.info        = document.querySelector(obj.info);
         this.auto        = obj.auto;
 
-        this.open();    
+        this.open(this.img);    
         this.listeners();
-        //автослайдер на главную:
+
+        //автослайдер на главную (пока не работает):
         if(this.auto) {
             //console.log('123');
         }
     }
     
-    open() {     
+    open(image) {     
         // if(!this.wrapper.classList.contains('show') ) {} //можно проверить на show
         this.wrapper.classList.add('show'); 
         this.photo.classList.add('show');
-        this.photo.append(this.img);
-        this.i = +this.img.dataset.id;
+        this.photo.append(image);
+        this.i = +image.dataset.id;
         this.scrollBar(0);
     }
     close() {
@@ -41,6 +42,7 @@ class Slider {
         let img = this.imgGallery[this.i].cloneNode(true);
         this.photo.append( img );
         this.i++;
+        console.log('slide_next..');
     }
     prev() { 
         this.i--;
