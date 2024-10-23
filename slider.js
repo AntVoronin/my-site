@@ -57,9 +57,10 @@ class Slider {
             ev.stopPropagation(); 
             console.log('zoming image...');
         });
+        this.photo.addEventListener('contextmenu', event => event.preventDefault() ); //отменили контекст меню 
         //выводим текст-описание при наведении на фото:
-        this.photo.addEventListener('mouseover', ()=> this.info.classList.add('show')    );
-        this.photo.addEventListener('mouseout',  ()=> this.info.classList.remove('show') );
+        // this.photo.addEventListener('mouseover', ()=> this.info.classList.add('show')    );
+        // this.photo.addEventListener('mouseout',  ()=> this.info.classList.remove('show') );
         //как повесить один обработчик на разные элементы?
         this.wrapper.addEventListener( 'click',  ()=> this.close() );
         this.btnClose.addEventListener('click',  ()=> this.close() );
