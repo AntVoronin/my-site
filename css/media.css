@@ -27,7 +27,7 @@
     .main__content h3 { font-size: 3.5em; }
     .main__content p  { font-size: 3em; line-height: 1.5em; } 
    
-    .page-wrapper {
+    .wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;

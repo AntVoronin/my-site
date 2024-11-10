@@ -2,15 +2,37 @@ class Slider {
 
     i = 0;
     constructor(obj) {
+
         this.img         = obj.img;
         this.imgGallery  = document.querySelectorAll(obj.imgGallery);
-        this.wrapper     = document.querySelector(obj.wrapper);
-        this.photo       = document.querySelector(obj.photo);
-        this.btnNext     = document.querySelector(obj.btnNext);
-        this.btnPrev     = document.querySelector(obj.btnPrev);
-        this.btnClose    = document.querySelector(obj.btnClose);
-        this.info        = document.querySelector(obj.info);
         this.auto        = obj.auto;
+        this.main        = document.querySelector(obj.main);
+
+        this.slider = document.createElement('div');
+        this.slider.classList.add('slider');
+        this.slider.insertAdjacentHTML("beforeend", ` 
+                <div class="slider__close">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+                <div class="slider__prev">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                </div>
+                <div class="slider__next">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </div>
+                <div class="slider__photo"></div>
+                <div class="slider__info">
+                </div> `  );
+        this.main.appendChild(this.slider);
+
+        console.log( 'this = ', this);
+        
+        this.wrapper     = document.querySelector('.slider');
+        this.photo       = document.querySelector('.slider__photo');
+        this.btnNext     = document.querySelector('.slider__next');
+        this.btnPrev     = document.querySelector('.slider__prev');
+        this.btnClose    = document.querySelector('.slider__close');
+        this.info        = document.querySelector('.slider__info');
 
         this.open(this.img);    
         this.listeners();
@@ -22,18 +44,22 @@ class Slider {
     }
     
     open(image) {     
-        // if(!this.wrapper.classList.contains('show') ) {} //можно проверить на show
-        this.wrapper.classList.add('show'); 
-        this.photo.classList.add('show');
+        // this.wrapper.classList.add('show'); 
+        // this.photo.classList.add('show');
         this.photo.append(image);
         this.i = +image.dataset.id;
         this.scrollBar(0);
     }
     close() {
-        this.wrapper.classList.remove('show');
-        this.photo.classList.remove('show');
-        this.photo.innerHTML = '';
+        //надо по закрытию удалять слайдер, а в конструкторе создавать при мозд нов объекта:
+        // this.wrapper.classList.remove('show');
+        // this.photo.classList.remove('show');
+        //this.photo.innerHTML = '';
+
+        this.slider.remove();
         this.scrollBar(1);
+        //delete this;
+        //delete(Slider);
         //как удалить объект слайдера? они множатся!!
     }
     next() {
@@ -73,10 +99,11 @@ class Slider {
             ev.stopPropagation(); 
             this.prev();
         } );
-        window.addEventListener('keydown',  ev => {
-            if(ev.key === "ArrowRight") this.next();
-            if(ev.key === "ArrowLeft" ) this.prev();
-            if(ev.key === "Escape" )    this.close()
+        document.addEventListener('keyup',  ev => {
+            if(ev.code === "ArrowRight") this.next();
+            if(ev.code === "ArrowLeft" ) this.prev();
+            if(ev.code === "Escape" )    this.close();
+            //if(ev.code === "KeyZ"   )     this.close();
         } );
     }
     scrollBar(bul) {

@@ -238,7 +238,6 @@ window.addEventListener('DOMContentLoaded', function() {
         {// content.innerHTML += `<img src="/img/gryadki/${i}.jpg" alt=""></img>` ; 
             content.insertAdjacentHTML("beforeend", `<div class="main__content__img"><img src="img/${el.id}/${i}.jpg" data-id="${i}" alt="${i}.jpg"></img></div>` );
         }
-
         //слайдеры накапливаются приповторном запуске, как их очищать? чтоб оставался только один слайдер?
         newSlider('.main__content .main__content__img > img');
     };
@@ -265,17 +264,27 @@ window.addEventListener('DOMContentLoaded', function() {
             img.addEventListener('click', ()=> {
                 // img.classList.add('zoom'); //как лучше добавить анимац зуум??
                 let imgClick = img.cloneNode(true);
-                let slider = new Slider({ 
+                let objSlider = new Slider({ 
                                             img:         imgClick, 
                                             imgGallery:  '.main__content .main__content__img > img',
-                                            wrapper:     str.slider.wrapper,
-                                            photo:       str.slider.photo,
-                                            btnNext:     str.slider.btnNext,
-                                            btnPrev:     str.slider.btnPrev,
-                                            btnClose:    str.slider.btnClose,
-                                            info:        str.slider.info, //? как выводить реальное описание каждой фото? из img.alt брать???
-                                            auto:        'false'
+                                            // wrapper:     str.slider.wrapper,
+                                            // photo:       str.slider.photo,
+                                            // btnNext:     str.slider.btnNext,
+                                            // btnPrev:     str.slider.btnPrev,
+                                            // btnClose:    str.slider.btnClose,
+                                            // info:        str.slider.info, //? как выводить реальное описание каждой фото? из img.alt брать???
+                                            auto:        'false', //если тру - просто передавать другую обёртку в автослайдер
+                                            main: '.main'
                                         });
+                // const btnClose    = document.querySelector('.slider__close');
+                // const wrapSlider  = document.querySelector('.slider');
+                // btnClose, wrapSlider.addEventListener( 'click', ()=> {
+                //     console.log(objSlider);
+                //     console.log('Удаляем слайдер...');
+                //     delete objSlider;
+                //     console.log(objSlider); //-удалить не выходит??
+                // }  );
+
             console.log('new slider obj');
             })
         } );

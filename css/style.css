@@ -27,7 +27,7 @@ body {
     background-color: #f1f1f1;
 }
 
-.page-wrapper {
+.wrapper {
     position: relative;
     height: 100%;
     min-height: 100vh;
@@ -110,14 +110,20 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(255, 255, 255, 1);
-    display: none;
+    /* display: none; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 .slider__photo {
     display: flex;
     width: 700px;
     height: 550px;
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
     /* flex-direction: column-reverse; */
 }
 .slider__photo img {
